@@ -3,8 +3,8 @@
 ## 1. What is Wasm?
 
 Take a look at two examples: 
-1. The first one computing the GCD (gratest common divisor) of two numbers. <br/>Here is the Wasm [module](wasm_bytecode/wasm_modules/gcd.wat). To the Rust program invoking it is [this one](wasm_bytecode/src/gcd/src/main.rs). 
-2. The second example shows some actions on the linear memory. <br/>The module is [here](wasm_bytecode/wasm_modules/memory.wat), the Rust main is [here](wasm_bytecode/src/memory/src/main.rs). 
+1. The first one computing the GCD (gratest common divisor) of two numbers. <br/>Here is the Wasm [module](wasm_modules/gcd.wat). To the Rust program invoking it is [this one](gcd/src/main.rs). 
+2. The second example shows some actions on the linear memory. <br/>The module is [here](wasm_modules/memory.wat), the Rust main is [here](memory/src/main.rs). 
 
 
 ## 2. Building and running
