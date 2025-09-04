@@ -1,4 +1,9 @@
 //! Example taken from https://docs.wasmtime.dev/examples-rust-gcd.html.
+//!
+//! Example of instantiating of the WebAssembly module and invoking its exported
+//! function.
+
+// You can execute this example with `cargo run --example gcd`
 
 use wasmtime::*;
 
