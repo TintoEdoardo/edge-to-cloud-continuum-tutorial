@@ -18,5 +18,6 @@ From inside ```out/``` you can run the examples with:
 For cleaning up the repository (and reclaiming your 5GB) run ```./clean.sh```.   
 
 ## 3. References
-[KodeKloud - Getting started with WebAssembly](https://notes.kodekloud.com/docs/Exploring-WebAssembly-WASM/Getting-Started-with-WebAssembly/Understanding-the-WebAssembly-Binary-Format) <br/>
-[Mozilla Developer - Understanding the text format](https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/Understanding_the_text_format)
+[1] [KodeKloud - Getting started with WebAssembly](https://notes.kodekloud.com/docs/Exploring-WebAssembly-WASM/Getting-Started-with-WebAssembly/Understanding-the-WebAssembly-Binary-Format) <br/>
+[2] [Mozilla Developer - Understanding the text format](https://developer.mozilla.org/en-US/docs/WebAssembly/Guides/Understanding_the_text_format) <br/>
+[3] [Security of WebAssembly](https://webassembly.org/docs/security/)

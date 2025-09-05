@@ -17,7 +17,7 @@ You can use the following script:
 ___
 ### Sections
 
-1. WebAssembly (Wasm) bytecode \[ [first tutorial](src/wasm_bytecode/wasm_bytecode.md) \]
-2. From Rust to Wasm \[ [second tutorial](src/compiling_to_wasm/compiling_to_wasm.md) \]
+1. WebAssembly (Wasm) bytecode \[ [first tutorial](01_wasm_bytecode/wasm_bytecode.md) \]
+2. From Rust to Wasm \[ [second tutorial](02_compiling_to_wasm/compiling_to_wasm.md) \]
 3. Applications as aggregates of Wasm modules
 4. _Live_ migrations of Wasm module

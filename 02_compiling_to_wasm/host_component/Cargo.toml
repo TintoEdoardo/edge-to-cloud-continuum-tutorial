@@ -1,0 +1,8 @@
+[package]
+name = "host_component"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+wasmtime = "34.0.2"
+wasmtime-wasi = "34.0.2"
