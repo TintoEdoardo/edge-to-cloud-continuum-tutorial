@@ -1,0 +1,36 @@
+//! Example from https://github.com/bytecodealliance/wasmtime/blob/main/examples/linking.rs.
+
+//! Example of instantiating two modules which link to each other.
+
+// You can execute this example with `cargo run --example linking`
+
+use wasmtime::*;
+use wasmtime_wasi::WasiCtx;
+
+fn main() -> Result<()> {
+    let engine = Engine::default();
+
+    // First set up our linker which is going to be linking modules together. We
+    // want our linker to have wasi available, so we set that up here as well.
+    let mut linker = Linker::new(&engine);
+    wasmtime_wasi::preview1::add_to_linker_sync(&mut linker, |s| s)?;
+
+    // Load and compile our two modules
+    let linking1 = Module::from_file(&engine, "module_1.wat")?;
+    let linking2 = Module::from_file(&engine, "module_2.wat")?;
+
+    // Configure WASI and insert it into a `Store`
+    let wasi = WasiCtx::builder().inherit_stdio().inherit_args().build_p1();
+    let mut store = Store::new(&engine, wasi);
+
+    // Instantiate our first module which only uses WASI, then register that
+    // instance with the linker since the next linking will use it.
+    let linking2 = linker.instantiate(&mut store, &linking2)?;
+    linker.instance(&mut store, "module_2", linking2)?;
+
+    // And with that we can perform the final link and execute the module.
+    let linking1 = linker.instantiate(&mut store, &linking1)?;
+    let run = linking1.get_typed_func::<(), ()>(&mut store, "run")?;
+    run.call(&mut store, ())?;
+    Ok(())
+}

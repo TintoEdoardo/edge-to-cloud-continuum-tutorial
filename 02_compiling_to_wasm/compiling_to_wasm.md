@@ -6,8 +6,8 @@ Several programming languages might be compiled to Wasm. <br/>
 In this tutorial, we will use Rust (but check the references for a similar example with C). 
 
 Now we are going to write a minimal Wasm [module](wasm_modules/src/lib.rs):
-1. Firstly, without any imported function from the host. 
-2. Then, importing a `clock` function. 
+1. Firstly, without any mport from the outside environment (also known as 'host'). 
+2. Then, importing a `clock` function from the host. 
 
 The compilation will require approximately 3GB. You can perform the building with ```./build.sh```. <br/>
 For cleaning up use ```./clean.sh```.
