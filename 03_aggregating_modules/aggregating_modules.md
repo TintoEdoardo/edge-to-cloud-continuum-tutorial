@@ -1,22 +1,21 @@
 # Aggregating modules
 
-WebAssembly modules can be used as applications components. <br/>
-This means that Wasm modules should be able to work together. 
+We can use WebAssembly modules as building blocks for applications. 
 
-## 1. Multi-modules applications
+## 1. Multi-module applications
 
-A first approach to integrate modules consists in linking them (the so-called multi-module applications).
+Linking modules is a way to aggregate Wasm modules (into so-called _multi-module_ applications).
 
-1. Check [this](multi_module_app/src/main.rs) example, where we are instantiating [two Wasm modules](multi_module_app/wasm_modules) with dependencies between each other. 
-2. As usual, ```build.sh``` and ```clean.sh``` are available within ```multi_module_app```. 
+1. In [this](multi_module_app/src/main.rs) example, we are instantiating [two Wasm modules](multi_module_app/wasm_modules) with dependencies between them. 
+2. As usual, ```build.sh``` and ```clean.sh``` are available within ```multi_module_app/```. 
 
 ## 2. The component model
 
-The component model tries to make Wasm modules more interoperable, introducing a new language, WIT (Wasm Interface Type), <br/>
-to define interfaces between _components_, instead of modules. 
-Wasm _components_ encapsulate modules. 
+The _component model_ is a novel mechanism for aggregating modules as Wasm _components_. <br/>
+Each WebAssembly component is associated with a WIT (WebAssembly Interface Types) interface, describing <br/>
+the imports and exports of the modules in it. 
 
-
+A complete example of how to use components is available [here](https://component-model.bytecodealliance.org/language-support/rust.html). 
 
 ## 3. References
 [1] [Wasmtime documentation - Linking Modules](https://docs.wasmtime.dev/examples-rust-linking.html) <br/>
