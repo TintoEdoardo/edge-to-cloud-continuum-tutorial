@@ -23,4 +23,4 @@ ___
 1. WebAssembly (Wasm) bytecode \[ [first tutorial](01_wasm_bytecode/wasm_bytecode.md) \]
 2. From Rust to Wasm \[ [second tutorial](02_compiling_to_wasm/compiling_to_wasm.md) \]
 3. Applications as aggregates of Wasm modules \[ [third tutorial](03_aggregating_modules/aggregating_modules.md) \]
-4. _Live_ migrations of a Wasm module
+4. _Live_ migrations of a Wasm module \[ [fourth tutorial](04_live_migration/live_migration.md) \]

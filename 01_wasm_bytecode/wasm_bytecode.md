@@ -8,14 +8,21 @@ The following are two examples taken from Wasmtime documentation:
 
 
 ## 2. Building and running
-Run ```./build.sh``` (approx. 5GB required) to build the two applications. <br/>
+To build the two applications run: (approx. 5GB required) 
+```sh
+./build.sh
+```
+
 Once the building completes, you will find the Rust programs and the Wasm modules in ```out/```. <br/>
 From ```out/``` run the examples with: 
 1. ```./gcd```
 2. ```./memory```
 
 
-To clean the repository (and reclaim your 5GB), run ```./clean.sh```.   
+To clean the repository (and reclaim your 5GB), run:
+```sh
+./clean.sh
+```
 
 ## 3. References
 [1] [KodeKloud - Getting started with WebAssembly](https://notes.kodekloud.com/docs/Exploring-WebAssembly-WASM/Getting-Started-with-WebAssembly/Understanding-the-WebAssembly-Binary-Format) <br/>

@@ -7,7 +7,7 @@ We can use WebAssembly modules as building blocks for applications.
 Linking modules is a way to aggregate Wasm modules (into so-called _multi-module_ applications).
 
 1. In [this](multi_module_app/src/main.rs) example, we are instantiating [two Wasm modules](multi_module_app/wasm_modules) with dependencies between them. 
-2. As usual, ```build.sh``` and ```clean.sh``` are available within ```multi_module_app/```. 
+2. As usual, ```./build.sh``` and ```./clean.sh``` are available within ```multi_module_app/```. 
 
 ## 2. The component model
 
