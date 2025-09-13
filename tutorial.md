@@ -1,5 +1,29 @@
-# Tutorial
+# Laboratory
 ___
+
+### Objectives
+1. Practice the use of WebAssembly
+   1. Dealing with the Wasm bytecode
+   2. Compiling (from Rust) to Wasm
+   3. Aggregating Wasm modules into applications
+
+
+2. Migrating a WebAssembly computation
+    1. Discussing the prerequisites for live migration
+    2. Familiarizing with a checkpoint and restore mechanism for Wasm computations
+    3. Migrating a computation
+
+---
+
+### Outline of the activity
+
+1. WebAssembly (Wasm) bytecode \[ [first laboratory](01_wasm_bytecode/wasm_bytecode.md) \]
+2. From Rust to Wasm \[ [second laboratory](02_compiling_to_wasm/compiling_to_wasm.md) \]
+3. Applications as aggregates of Wasm modules \[ [third laboratory](03_aggregating_modules/aggregating_modules.md) \]
+4. _Live_ migrations of a Wasm module \[ [fourth laboratory](04_live_migration/live_migration.md) \]
+
+
+---
 
 ### Required tools
 
@@ -18,9 +42,3 @@ To install those tools, you can use the following script:
 ```
 
 ___
-### Sections
-
-1. WebAssembly (Wasm) bytecode \[ [first tutorial](01_wasm_bytecode/wasm_bytecode.md) \]
-2. From Rust to Wasm \[ [second tutorial](02_compiling_to_wasm/compiling_to_wasm.md) \]
-3. Applications as aggregates of Wasm modules \[ [third tutorial](03_aggregating_modules/aggregating_modules.md) \]
-4. _Live_ migrations of a Wasm module \[ [fourth tutorial](04_live_migration/live_migration.md) \]

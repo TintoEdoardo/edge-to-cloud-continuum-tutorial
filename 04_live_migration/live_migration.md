@@ -38,7 +38,16 @@ Then you can inject the C/R procedures in the function with index ```12``` defin
 
 The next step is trying to migrate a computation. 
 
+```sh
+./build_live_migration.sh
+```
 
+Then, from ```out/```, insert C/R into a Wasm module, and try to run it:
+```sh
+./main "./" 10
+```
+
+How can we check if the result is correct? 
 
 ## References
 [1] [WebAssembly stack](https://webassembly.github.io/spec/core/exec/runtime.html). 
