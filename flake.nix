@@ -13,6 +13,7 @@
 
   outputs = {
     self,
+    nixpkgs,
     devshell,
     utils,
     ...
@@ -21,7 +22,7 @@
     overlays.default = import ./overlay.nix;
   };
 
-  utils.lib.eachSystem
+  utils.lib.eachSystem = 
   [
     "x86_64-linux"
   ]
@@ -81,15 +82,17 @@
     in
     {
       devshell.default = (
-        packages = with pkgs; [
-          stdenv.cc
-          coreutils
-          rust-toolchain-nixpkgs-current # also contains clippy
-          rust-analyzer
-          cargo-watch
-        ];
-      )
+        pkgs.devshell.mkShell {
+          packages = with pkgs; [
+            stdenv.cc
+            coreutils
+            rust-toolchain-nixpkgs-current # also contains clippy
+            rust-analyzer
+            cargo-watch
+          ];
+        }
+      );
     }
-  )
+  );
 
 }
