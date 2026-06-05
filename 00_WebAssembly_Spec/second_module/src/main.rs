@@ -1,4 +1,3 @@
-use wasmtime;
 use wasmtime::anyhow::Result;
 
 fn main() -> Result<()> {

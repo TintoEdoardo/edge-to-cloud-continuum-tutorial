@@ -1,4 +1,6 @@
 
+;; +-- PART 3 --+
+;; Live migration
 
 (module $the_module
 
@@ -27,14 +29,14 @@
 
             ;; To simulate a checkpoint event,
             ;; decide how many iterations to complete
-            ;; bedore suspension.
+            ;; before suspension.
             local.get $max_iter
             local.get $iteration_to_skip
             i32.sub
             local.set $max_iter
         )
         ;; Append $value to a queue in
-        ;; the linear memory, 10 times.
+        ;; the linear memory, 5 times.
         (loop $loop_head
 
             ;; Make a checkpoint.
@@ -55,10 +57,9 @@
             i32.add
             local.set $addr
 
-            ;; Decide to jump or continue:
+            ;; Decide whether to jump or continue:
             ;; if $addr is strictly less then
-            ;; $max_iter, jump to the head
-            ;; of the loop.
+            ;; $max_iter, jump to the head of the loop.
             local.get $addr
             local.get $max_iter
             i32.lt_s

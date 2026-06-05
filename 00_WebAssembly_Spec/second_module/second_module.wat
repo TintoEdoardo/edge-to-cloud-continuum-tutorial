@@ -1,5 +1,5 @@
 
-;; +-- PART 2 --+
+;; +-- PART 1 --+
 ;; Interfacing with the host environment
 
 ;; A module has but two interfaces with the

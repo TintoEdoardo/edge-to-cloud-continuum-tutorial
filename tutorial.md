@@ -15,9 +15,9 @@ ___
 
 ### Outline of the activity
 
-1. WebAssembly (Wasm) bytecode \[ [first laboratory](00_WebAssembly_Spec) \]
-2. From Rust to Wasm \[ [second laboratory](01_Compiling_To_Wasm) \]
-3. Applications as aggregates of Wasm modules \[ [third laboratory](02_The_Application) \]
+1. WebAssembly (Wasm) bytecode \[ [first part](00_WebAssembly_Spec) \]
+2. From Rust to Wasm \[ [second part](01_Compiling_To_Wasm) \]
+3. Applications as aggregates of Wasm modules \[ [third part](02_The_Application) \]
 
 ---
 

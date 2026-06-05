@@ -1,10 +1,10 @@
 
-;; +-- PART 2 --+
+;; +-- PART 1 --+
 ;; Interfacing with the host environment
 
-;; Linear memories are contiguous portion
-;; of the host address space.
-;; A module access its linear memory using
+;; Linear memories are contiguous portions
+;; of the host memory address space.
+;; A module accesses its linear memory using
 ;; an offset.
 
 (module $the_module
@@ -19,7 +19,7 @@
 
         ;; Load an i32 value from $memory
         ;; using the value on top of the stack
-        ;; as offset.
+        ;; as an offset.
         i32.load
     )
 
@@ -33,7 +33,7 @@
         ;; it will be written into $memory.
         local.get 1
 
-        ;; Fially, perform the store operation.
+        ;; Finally, perform the store operation.
         i32.store
     )
 

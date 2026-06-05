@@ -50,12 +50,30 @@ fn main() {
                     next_activation.tv_nsec -= 1_000_000_000;
                 }
 
-                let mut j : i32 = 0;
-                let mut k : i32 = 0;
-                for i in 0..10_000_000 {
-                    j = i + k - j;
-                    k = j - i;
-                }
+                // WebAssembly execution.
+                let mut store: wasmtime::Store<()> =
+                    wasmtime::Store::default();
+
+                let module   : wasmtime::Module    =
+                    wasmtime::Module::from_file(store.engine(), "module.wat")
+                        .expect("Module creation failed. ");
+
+                let print    : wasmtime::Func      =
+                    wasmtime::Func::wrap(&mut store, |param_1: i32| -> () {
+                        println!("param_1 = {}", param_1);
+                    });
+
+                let instance : wasmtime::Instance  =
+                    wasmtime::Instance::new(&mut store, &module, &[print.into()])
+                        .expect("Instance cration failed. ");
+
+                let wasm_import_function : wasmtime::TypedFunc<(),()> =
+                    instance.get_typed_func::<(),()>(&mut store, "main_function")
+                        .expect("Typed function not found. ");
+
+                let _result : wasmtime::Result<()> =
+                    wasm_import_function.call(&mut store, ());
+
 
                 // Sleep until the next activation time.
                 libc::clock_nanosleep (libc::CLOCK_MONOTONIC,

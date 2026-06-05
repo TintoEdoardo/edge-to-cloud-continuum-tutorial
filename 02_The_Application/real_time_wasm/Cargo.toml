@@ -5,3 +5,4 @@ edition = "2024"
 
 [dependencies]
 libc = {version = "1.0.0-alpha.3"}
+wasmtime = {version = "45.0.0"}
