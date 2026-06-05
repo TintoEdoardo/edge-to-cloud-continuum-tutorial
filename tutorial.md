@@ -5,7 +5,7 @@ ___
 1. Practice the use of WebAssembly
    1. The Wasm bytecode, its constructs, and its properties
    2. Compiling (from Rust) to WebAssembly
-2. Using WebAssembly within an application
+2. Using WebAssembly within the application
    1. Running Wasm in a real-time task
 3. Live migration with WebAssembly
    1. Instrumenting the bytecode to perform checkpoints
@@ -17,7 +17,7 @@ ___
 
 1. WebAssembly (Wasm) bytecode \[ [first part](00_WebAssembly_Spec) \]
 2. From Rust to Wasm \[ [second part](01_Compiling_To_Wasm) \]
-3. Applications as aggregates of Wasm modules \[ [third part](02_The_Application) \]
+3. The application perspective \[ [third part](02_The_Application) \]
 
 ---
 
