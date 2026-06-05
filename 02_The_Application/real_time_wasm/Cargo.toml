@@ -1,0 +1,7 @@
+[package]
+name = "real_time_wasm"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+libc = {version = "1.0.0-alpha.3"}
