@@ -130,5 +130,5 @@ Cargo.lock
 # End of https://www.toptal.com/developers/gitignore/api/rust,intellij
 
 /.thrash/
-/.thrash/01_wasm_bytecode/
-/.thrash/src/
+
+/.idea/
